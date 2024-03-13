@@ -15,6 +15,9 @@ Before you begin, ensure you have the following installed:
 
 - Docker
 - Docker Compose
+
+## Getting Started
+To run the Pozos Application, follow these steps:
  
 
 
