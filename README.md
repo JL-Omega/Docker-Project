@@ -13,8 +13,8 @@ This repository contains the source code and Docker configuration for the Pozos 
 
 Before you begin, ensure you have the following installed:
 
-- Docker
-- Docker Compose
+- ***Docker***
+- ***Docker Compose***
 
 ## Getting Started
 To run the Pozos Application, follow these steps:
@@ -31,7 +31,51 @@ To run the Pozos Application, follow these steps:
    docker-compose up -d
    ```
 
-The application services should now be up and running.
+  The application services should now be up and running.
+
+## Application Structure
+
+The application is composed of the following services:
+
+- ***pozos-website:*** Frontend service for hosting a website.
+- ***pozos-api:*** Backend service for managing student information.
+- ***pozos-registry-ui:*** Frontend service for managing Docker images in the Docker registry.
+- ***pozos-registry:*** Backend service for hosting a Docker registry.
+  
+## Configuration
+
+### Docker Configuration
+
+The Docker configuration for each service is specified in the ***Dockerfile*** and ***docker-compose.yml*** files.
+
+### Environment Variables
+
+The following environment variables can be configured for each service:
+
+- `pozos-website:`
+
+USERNAME: Username for accessing the website.
+PASSWORD: Password for accessing the website.
+pozos-registry-ui:
+
+REGISTRY_URL: URL of the Docker registry.
+REGISTRY_TITLE: Title of the Docker registry.
+DELETE_IMAGES: Enable or disable image deletion.
+CATALOG_ELEMENTS_LIMIT: Limit for the number of catalog elements.
+Usage
+Once the services are running, you can access the following components:
+
+Website: Access the website hosted on port 80.
+API: Access the API hosted on port 4000.
+Registry UI: Access the Docker registry UI hosted on port 8081.
+Contributing
+If you'd like to contribute to this project, please fork the repository and submit a pull request.
+
+Maintainer
+This project is maintained by Jean-Luc Mpande. You can reach out to the maintainer via email at mpandejl1@gmail.com.
+
+License
+This project is licensed under the MIT License - see the LICENSE file for details.
  
 
 
