@@ -32,6 +32,21 @@ To run the Pozos Application, follow these steps:
 
   The application services should now be up and running.
 
+## Usage
+
+Once the services are running, you can access the following components:
+
+- **Website:** Access the website hosted on port 81. The result is shown in the screenshot below.
+
+
+  
+- **Registry UI:** Access the Docker registry UI hosted on port 8081. The result is shown in the screenshot below.
+
+  
+
+Don't forget to push images to the local registry by tagging the image with `localhost:5000` as shown in the screenshot below.
+
+
 ## Application Structure
 
 The application is composed of the following services:
@@ -86,23 +101,6 @@ When configuring the `pozos-website` service in the Docker Compose file (`docker
 The `simple_api/student_age.py` file likely contains authentication logic that checks the provided username and password against the configured values. Therefore, any modifications to the credentials in the Docker Compose file should be mirrored in the Python script to ensure proper authentication between the frontend and backend components.
 
 Failure to synchronize these changes may result in authentication errors or unexpected behavior when accessing the application. Always ensure consistency between the Docker Compose configuration and application logic to maintain the integrity and security of the Pozos Application.
-
-## Usage
-
-Once the services are running, you can access the following components:
-
-- **Website:** Access the website hosted on port 81. The result is shown in the screenshot below.
-
-
-  
-- **Registry UI:** Access the Docker registry UI hosted on port 8081. The result is shown in the screenshot below.
-
-  
-
-Don't forget to push images to the local registry by tagging the image with `localhost:5000` as shown in the screenshot below.
-
-
-
 
 ## Contributing
 If you'd like to contribute to this project, please fork the repository and submit a pull request.
