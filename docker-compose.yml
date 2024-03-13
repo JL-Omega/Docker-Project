@@ -1,8 +1,9 @@
 version: "3"
 services:
   pozos-website:
-    container_name: pozos-frontend
+    container_name: pozos-website-frontend
     image: php:apache
+    restart: always
     depends_on:
       - pozos-api
     ports:
@@ -16,8 +17,9 @@ services:
       - pozos-network
       
   pozos-api:
-    container_name: pozos-backend
+    container_name: pozos-website-backend
     image: jlmpande/student_list:1.0.0 
+    restart: always
     ports:
       - 4000:5000
     volumes:
@@ -25,5 +27,32 @@ services:
     networks:
       - pozos-network
 
+  pozos-registry-ui:
+    container_name: pozos-registry-frontend
+    image: joxit/docker-registry-ui:1.5-static
+    restart: always
+    ports:
+      - 8081:80
+    environment:
+      - REGISTRY_URL=http://pozos-registry:5000
+      - REGISTRY_TITLE=POZOS REGISTRY
+      - DELETE_IMAGES=true
+      - CATALOG_ELEMENTS_LIMIT=1000
+    networks:
+      - pozos-network
+
+  pozos-registry:
+    container_name: pozos-registry-backend
+    image: registry:2
+    restart: always
+    ports:
+      - 5000:5000
+    environment:
+      - REGISTRY_STORAGE_DELETE_ENABLED=true
+    networks:
+      - pozos-network
+
 networks:
   pozos-network:
+    external: true
+    name: pozos-network
