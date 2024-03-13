@@ -64,16 +64,6 @@ The environment variables can be configured for the following services:
   - ***USERNAME:*** Username for accessing the website.
   - ***PASSWORD:*** Password for accessing the website.
 
-   When configuring the ***pozos-website*** service in the Docker Compose file (`docker-compose.yml`), it's important to note that if you change the `USERNAME` or `PASSWORD` environment variables, you'll need to synchronize these changes with the                
-  `simple_api/student_age.py` file.</p>
-
-  The `simple_api/student_age.py` file likely contains authentication logic that checks the provided username and password against the configured values. Therefore, any modifications to the credentials in the Docker Compose file should be mirrored in the Python 
-  script to ensure proper authentication between the frontend and backend components.
-
-  Failure to synchronize these changes may result in authentication errors or unexpected behavior when accessing the application. Always ensure consistency between the Docker Compose configuration and application logic to maintain the integrity and security of the 
-  Pozos Application.
-
-
 - #### pozos-registry-ui:
 
   - ***REGISTRY_URL:*** URL of the Docker registry.
@@ -87,7 +77,7 @@ Once the services are running, you can access the following components:
 
   - ***Website:*** Access the website hosted on port 81.
   - ***Registry UI:*** Access the Docker registry UI hosted on port 8081.
-  - 
+    
 ## Service Name and Port Synchronization
 
 When modifying the name or port of the `pozos-api` service in the Docker Compose file (`docker-compose.yml`), it's essential to update the corresponding URL link in the `website/index.php` file.
@@ -95,6 +85,14 @@ When modifying the name or port of the `pozos-api` service in the Docker Compose
 The `website/index.php` file likely contains the URL endpoint used to connect the frontend with the backend API service. Any changes made to the service name or port should be reflected in this URL to ensure proper communication between the frontend and backend components.
 
 Failure to synchronize these changes may result in connection errors or unexpected behavior when interacting with the Pozos Application. Always verify and update the URL link in the `website/index.php` file to maintain seamless communication between frontend and backend services.
+
+## Configuration Synchronization
+
+When configuring the `pozos-website` service in the Docker Compose file (`docker-compose.yml`), it's important to note that if you change the `USERNAME` or `PASSWORD` environment variables, you'll need to synchronize these changes with the `simple_api/student_age.py` file.
+
+The `simple_api/student_age.py` file likely contains authentication logic that checks the provided username and password against the configured values. Therefore, any modifications to the credentials in the Docker Compose file should be mirrored in the Python script to ensure proper authentication between the frontend and backend components.
+
+Failure to synchronize these changes may result in authentication errors or unexpected behavior when accessing the application. Always ensure consistency between the Docker Compose configuration and application logic to maintain the integrity and security of the Pozos Application.
 
 
 ## Contributing
