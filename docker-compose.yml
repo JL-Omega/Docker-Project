@@ -18,7 +18,7 @@ services:
   pozos-api:
     container_name: backend_student_list
     ports:
-      - 4000:5000
+      - 5000:5000
     volumes:
       - ${PWD}/simple_api/student_age.json:/data/student_age.json
     image: jlmpande/student_list:1.0.0 
