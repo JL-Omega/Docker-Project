@@ -1,7 +1,7 @@
 version: "3"
 services:
   pozos-website:
-    container_name: pozos-website
+    container_name: pozos-frontend
     depends_on:
       - pozos-api
     ports:
@@ -16,9 +16,9 @@ services:
       - pozos-network
       
   pozos-api:
-    container_name: pozos-api
+    container_name: pozos-backend
     ports:
-      - 5000:5000
+      - 4000:5000
     volumes:
       - ${PWD}/simple_api/student_age.json:/data/student_age.json
     image: jlmpande/student_list:1.0.0 
