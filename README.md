@@ -75,7 +75,7 @@ Once the services are running, you can access the following components:
 If you'd like to contribute to this project, please fork the repository and submit a pull request.
 
 ## Maintainer
-This project is maintained by Jean-Luc Mpande. You can reach out to the maintainer via email at mpandejl1@gmail.com.
+This project is maintained by Jean-Luc Mpande. You can reach out to the maintainer via email at mpandejl1@gmail.com or [LinkedIn](https://www.linkedin.com/in/jean-luc-mpande-75981a23b/).
 
 ## License
 This project is licensed under the MIT License - see the LICENSE file for details.
