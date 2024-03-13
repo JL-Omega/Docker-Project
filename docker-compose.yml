@@ -12,6 +12,8 @@ services:
     environment:
       - USERNAME=jean-luc
       - PASSWORD=2024
+    networks:
+      - pozos-network
       
   pozos-api:
     container_name: backend_student_list
@@ -20,3 +22,9 @@ services:
     volumes:
       - ${PWD}/simple_api/student_age.json:/data/student_age.json
     image: jlmpande/student_list:1.0.0 
+    networks:
+      - pozos-network
+
+networks:
+  pozos-network:
+    name: pozos-network
