@@ -19,7 +19,7 @@ RUN apt update -y && \
         libsasl2-dev \
         libldap2-dev \
         libssl-dev && \
-    pip3 install -r ./requirements.txt 
+    pip3 install -r requirements.txt 
 
 # Expose port 5000 for the application
 EXPOSE 5000
