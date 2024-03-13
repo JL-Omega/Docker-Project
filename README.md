@@ -19,12 +19,12 @@ Before you begin, ensure you have the following installed:
 ## Getting Started
 To run the Pozos Application, follow these steps:
 1. Clone this repository:
-   '''bash
-   git clone
-   '''
+   ```bash
+   git clone https://github.com/JL-Omega/Mini-Docker-project.git
+   ```
 2. Navigate to the cloned directory:
      '''bash
-   cd 
+   cd Mini-Docker-project
    '''
 3. Build and start the services using Docker Compose:
      '''bash
