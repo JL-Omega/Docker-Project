@@ -45,7 +45,7 @@ The application is composed of the following services:
 
 ### Docker Configuration
 
-The Docker configuration for each service is specified in the ***Dockerfile*** and ***docker-compose.yml*** files.
+The Docker configuration for each service is specified in the ***docker-compose.yml*** files.
 
 ### Docker Image Deployment
 
