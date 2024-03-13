@@ -2,13 +2,13 @@ version: "3"
 services:
   pozos-website:
     container_name: pozos-frontend
+    image: php:apache
     depends_on:
       - pozos-api
     ports:
       - 80:80
     volumes:
       - ${PWD}/website:/var/www/html
-    image: php:apache
     environment:
       - USERNAME=jean-luc
       - PASSWORD=2024
@@ -17,11 +17,11 @@ services:
       
   pozos-api:
     container_name: pozos-backend
+    image: jlmpande/student_list:1.0.0 
     ports:
       - 4000:5000
     volumes:
       - ${PWD}/simple_api/student_age.json:/data/student_age.json
-    image: jlmpande/student_list:1.0.0 
     networks:
       - pozos-network
 
