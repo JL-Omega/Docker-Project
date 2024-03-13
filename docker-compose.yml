@@ -35,7 +35,7 @@ services:
       - 8081:80
     environment:
       - REGISTRY_URL=http://pozos-registry:5000
-      - REGISTRY_TITLE=POZOS REGISTRY
+      - REGISTRY_TITLE=POZOS COMPANY
       - DELETE_IMAGES=true
       - CATALOG_ELEMENTS_LIMIT=1000
     networks:
