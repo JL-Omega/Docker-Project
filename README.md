@@ -47,7 +47,7 @@ Once the services are running, you can access the following components:
   
 - **Registry UI:** Access the Docker registry UI hosted on port 8081. The result is shown in the screenshot below.
 
-  ![Screenshot_5](https://github.com/JL-Omega/Docker-project/assets/96908472/e5e6de96-f803-478d-becd-e0388711f252)
+ ![image](https://github.com/JL-Omega/Docker-project/assets/96908472/f26e5757-6dc9-4a5e-b9b3-3f36b86da88f)
 
 Don't forget to push images to the local registry by tagging the image with `localhost:5000` as shown in the screenshots below.
 
