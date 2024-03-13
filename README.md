@@ -87,6 +87,15 @@ Once the services are running, you can access the following components:
 
   - ***Website:*** Access the website hosted on port 81.
   - ***Registry UI:*** Access the Docker registry UI hosted on port 8081.
+  - 
+## Service Name and Port Synchronization
+
+When modifying the name or port of the `pozos-api` service in the Docker Compose file (`docker-compose.yml`), it's essential to update the corresponding URL link in the `website/index.php` file.
+
+The `website/index.php` file likely contains the URL endpoint used to connect the frontend with the backend API service. Any changes made to the service name or port should be reflected in this URL to ensure proper communication between the frontend and backend components.
+
+Failure to synchronize these changes may result in connection errors or unexpected behavior when interacting with the Pozos Application. Always verify and update the URL link in the `website/index.php` file to maintain seamless communication between frontend and backend services.
+
 
 ## Contributing
 If you'd like to contribute to this project, please fork the repository and submit a pull request.
