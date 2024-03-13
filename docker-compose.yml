@@ -27,4 +27,3 @@ services:
 
 networks:
   pozos-network:
-    name: pozos-network
