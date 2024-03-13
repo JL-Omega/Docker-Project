@@ -45,7 +45,7 @@ Once the services are running, you can access the following components:
   
 
 Don't forget to push images to the local registry by tagging the image with `localhost:5000` as shown in the screenshot below.
-
+![screen-3](https://github.com/JL-Omega/Docker-project/assets/96908472/84b7858e-26ce-41bc-8d72-e1410f783274)
 
 ## Application Structure
 
