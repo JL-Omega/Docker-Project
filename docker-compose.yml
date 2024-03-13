@@ -1,6 +1,11 @@
-name: "pozos-application"
-version: "3"
+
+name: "pozos-application" # Docker Compose file for POZOS application
+version: "3" # Defining the version of Docker Compose
+
+# Defining services for the application
 services:
+
+  # Service for the frontend of POZOS website
   pozos-website:
     container_name: pozos-website-frontend
     image: php:apache
@@ -10,13 +15,14 @@ services:
     ports:
       - 80:80
     volumes:
-      - ${PWD}/website:/var/www/html
+      - ${PWD}/website:/var/www/html  # Mounting website files into the container
     environment:
-      - USERNAME=jean-luc
+      - USERNAME=jean-luc  # Setting environment variables
       - PASSWORD=2024
     networks:
       - pozos-network
-      
+
+  # Service for the backend API of POZOS website
   pozos-api:
     container_name: pozos-website-backend
     image: jlmpande/student_list:1.0.0 
@@ -24,10 +30,11 @@ services:
     ports:
       - 4000:5000
     volumes:
-      - ${PWD}/simple_api/student_age.json:/data/student_age.json
+      - ${PWD}/simple_api/student_age.json:/data/student_age.json  # Mounting API data
     networks:
       - pozos-network
 
+  # Service for the frontend UI of POZOS registry
   pozos-registry-ui:
     container_name: pozos-registry-frontend
     image: joxit/docker-registry-ui:1.5-static
@@ -35,13 +42,14 @@ services:
     ports:
       - 8081:80
     environment:
-      - REGISTRY_URL=http://pozos-registry:5000
-      - REGISTRY_TITLE=POZOS COMPANY
-      - DELETE_IMAGES=true
-      - CATALOG_ELEMENTS_LIMIT=1000
+      - REGISTRY_URL=http://pozos-registry:5000  # Configuring registry URL
+      - REGISTRY_TITLE=POZOS COMPANY  # Setting registry title
+      - DELETE_IMAGES=true  # Configuring image deletion
+      - CATALOG_ELEMENTS_LIMIT=1000  # Setting catalog elements limit
     networks:
       - pozos-network
 
+  # Service for the backend of POZOS registry
   pozos-registry:
     container_name: pozos-registry-backend
     image: registry:2
@@ -49,10 +57,11 @@ services:
     ports:
       - 5000:5000
     environment:
-      - REGISTRY_STORAGE_DELETE_ENABLED=true
+      - REGISTRY_STORAGE_DELETE_ENABLED=true  # Enabling storage deletion
     networks:
       - pozos-network
 
+# Defining external network for services to communicate
 networks:
   pozos-network:
     external: true
