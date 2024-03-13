@@ -1,19 +1,22 @@
 version: "3"
 services:
-  website:
+  pozos-website:
     container_name: frontend_student_list
     depends_on:
-      - api
+      - pozos-api
     ports:
-      - 80:80
+      - 8080:80
     volumes:
       - ${PWD}/website:/var/www/html
     image: php:apache
+    environment:
+      - USERNAME=jean-luc
+      - PASSWORD=2024
       
-  api:
+  pozos-api:
     container_name: backend_student_list
     ports:
-      - 5000:5000
+      - 4000:5000
     volumes:
       - ${PWD}/simple_api/student_age.json:/data/student_age.json
     image: jlmpande/student_list:1.0.0 

@@ -16,8 +16,8 @@ app.debug = True
 
 @auth.get_password
 def get_password(username):
-    if username == 'toto':
-        return 'python'
+    if username == 'jean-luc':
+        return '2024'
     return None
 
 @auth.error_handler
