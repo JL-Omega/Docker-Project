@@ -5,7 +5,16 @@ This repo is a simple application to list student with a webserver (PHP) and API
 
 
 ------------
-### Introduction
+## Introduction
+
+This repository contains the source code and Docker configuration for the Pozos Application. The Pozos Application is a system composed of multiple services that work together to provide various functionalities related to managing student information, hosting a website, and maintaining a Docker registry.
+
+## Prerequisites
+
+Before you begin, ensure you have the following installed:
+
+ Docker
+ Docker Compose
 
 
 
