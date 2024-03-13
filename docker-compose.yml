@@ -1,0 +1,17 @@
+version: "3"
+services:
+  website:
+    container_name: frontend_student_list
+    ports:
+      - 80:80
+    volumes:
+      - ${PWD}/website:/var/www/html
+    image: php:apache
+      
+  api:
+    container_name: backend_student_list
+    ports:
+      - 5000:5000
+    volumes:
+      - ${PWD}/simple_api/student_age.json:/data/student_age.json
+    image: jlmpande/student_list:1.0.0 
