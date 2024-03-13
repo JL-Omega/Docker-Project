@@ -2,6 +2,8 @@ version: "3"
 services:
   website:
     container_name: frontend_student_list
+    depends_on:
+      - api
     ports:
       - 80:80
     volumes:
