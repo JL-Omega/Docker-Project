@@ -18,6 +18,20 @@ Before you begin, ensure you have the following installed:
 
 ## Getting Started
 To run the Pozos Application, follow these steps:
+1. Clone this repository:
+   '''bash
+   git clone
+   '''
+2. Navigate to the cloned directory:
+     '''bash
+   cd 
+   '''
+3. Build and start the services using Docker Compose:
+     '''bash
+   docker-compose up -d
+   '''
+
+The application services should now be up and running.
  
 
 
