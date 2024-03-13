@@ -37,15 +37,17 @@ To run the Pozos Application, follow these steps:
 Once the services are running, you can access the following components:
 
 - **Website:** Access the website hosted on port 81. The result is shown in the screenshot below.
-  ![Screenshot_1](https://github.com/JL-Omega/Docker-project/assets/96908472/570ae23e-93ec-4e3e-962b-9fcf2dcec7a0)
+- 
+  ![image](https://github.com/JL-Omega/Docker-project/assets/96908472/b5bb033d-1e9b-4671-b8d4-9018ee06c84b)
 
   Click on `List Student` and you will get the result below
 
-  ![Screenshot_2](https://github.com/JL-Omega/Docker-project/assets/96908472/6c93fe66-8813-4ef9-9b76-bfd1b5f0f759)
+  ![image](https://github.com/JL-Omega/Docker-project/assets/96908472/528f9bb7-cdb0-4290-ae1b-156e5453b83b)
 
   
 - **Registry UI:** Access the Docker registry UI hosted on port 8081. The result is shown in the screenshot below.
 
+  ![Screenshot_5](https://github.com/JL-Omega/Docker-project/assets/96908472/e5e6de96-f803-478d-becd-e0388711f252)
 
 Don't forget to push images to the local registry by tagging the image with `localhost:5000` as shown in the screenshots below.
 
