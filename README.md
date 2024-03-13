@@ -13,8 +13,9 @@ This repository contains the source code and Docker configuration for the Pozos 
 
 Before you begin, ensure you have the following installed:
 
- Docker
- Docker Compose
+- Docker
+- Docker Compose
+ 
 
 
 
