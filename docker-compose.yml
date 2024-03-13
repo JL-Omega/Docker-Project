@@ -1,3 +1,4 @@
+name: "pozos-application"
 version: "3"
 services:
   pozos-website:
