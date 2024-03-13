@@ -48,6 +48,14 @@ The application is composed of the following services:
 
 The Docker configuration for each service is specified in the ***Dockerfile*** and ***docker-compose.yml*** files.
 
+### Docker Image Deployment
+
+The Dockerfile for the backend service "pozos-website-backend" was built and the resulting image was pushed to Docker Hub under the username "jlmpande". This Docker image contains the necessary dependencies and configurations to run the backend service.
+
+The "pozos-api" service, which orchestrates the backend functionality, pulls the Docker image from the Docker Hub repository during container initialization. This ensures that the latest version of the backend service is always deployed when starting the application.
+
+For more details on the Docker image and its configurations, please refer to the Dockerfile in the repository. If you encounter any issues or have suggestions for improvements, feel free to open an issue or submit a pull request.
+
 ### Environment Variables
 
 The environment variables can be configured for the following services:
