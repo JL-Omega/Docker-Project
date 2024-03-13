@@ -65,13 +65,13 @@ The environment variables can be configured for the following services:
   - ***PASSWORD:*** Password for accessing the website.
 
   <p align="center">When configuring the ***pozos-website*** service in the Docker Compose file (`docker-compose.yml`), it's important to note that if you change the `USERNAME` or `PASSWORD` environment variables, you'll need to synchronize these changes with the 
-    `simple_api/student_age.py` file.
+    `simple_api/student_age.py` file.</p>
 
     The `simple_api/student_age.py` file likely contains authentication logic that checks the provided username and password against the configured values. Therefore, any modifications to the credentials in the Docker Compose file should be mirrored in the Python 
      script to ensure proper authentication between the frontend and backend components.
 
      Failure to synchronize these changes may result in authentication errors or unexpected behavior when accessing the application. Always ensure consistency between the Docker Compose configuration and application logic to maintain the integrity and security of the 
-     Pozos Application.</p>
+     Pozos Application.
 
 
 - #### pozos-registry-ui:
